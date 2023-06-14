@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    
+    <h1>Getting started with Arrays</h1>
+
+    <div class=" fruits"></div>
+
+    <script>
+        let fruits;
+        fruits= ['Orange', 'Mango', 'Pineapple', 'Guava', 'Apple', 'Coconut'];
+        // console.log(fruits[0]);
+        // console.log(fruits[2]);
+        // console.log(fruits[4]);
+
+        let fruitsString ='';
+
+        for(let index = 0; index < fruits.length; index++) {
+            fruitsString += fruits[index] + ', ';
+            console.log(fruitsString);
+
+        }
+
+        const outputDiv = document.querySelector('.fruits');
+        outputDiv.innerHTML = fruitsString;
+    </script>
+</body>
+</html>

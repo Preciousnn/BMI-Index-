@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="hero-img">
+            <div>
+                <main class="page-wrapper">
+                    <div class="main-wrapper">
+            
+                        <form class="bmi-form">
+                            <h2>BMI Calculator</h2>
+                            
+                            <div class="gender">
+                                <input type="radio" name="gender" id="gender" >
+                                <label for="gender">Male</label>
+                                
+                                <input type="radio" name="gender" id="gender" >
+                                <label for="gender">Female</label> 
+                            </div>
+            
+                            <div class="age">
+                                <label for="age">Age(1year and above)</label> <br>
+                                <input type="text" name="age" id="age"> 
+                            </div>
+            
+                        <div class="bmi">
+                            <div class="form-row">
+                                <label for="height">Height(m)</label>
+                                <input type="text" name="height" id="height">
+                            </div>
+            
+                            <div class="form-row">
+                                <label for="weight">Weight(Kg)</label>
+                                <input type="text" name="weight" id="weight">
+                            </div>
+                        </div>
+                            
+            
+                            <button id="calculate-button">Calculate</button>
+                            <div id="display"></div>
+                        </form>
+            
+                        <section class="note">
+                            <h3>Why calaculate your BMI</h3>
+                            <P>The body mass index (BMI) calculator estimates the amount of body fat a person has in relation to age, height, and weight.</P>
+                            <h3> How the BMI is calculated</h3>
+                            <P>
+                                The BMI calculation divides an adult's weight in kilograms (kg) by their height in metres (m) squared.
+            
+                                For example, if you weigh 70kg (around 11 stone) and are 1.73m (around 5 feet 8 inches) tall, 
+                                you work out your BMI by:
+            
+                                squaring your height: 1.73x1.73 = 2.99
+                                dividing 70 by 2.99 = 23.41
+            
+                                Your result will be displayed to 1 decimal place, for example 23.4.
+                           </P>
+                        </section>
+                    </div>
+            
+                </main>
+            </div>
+            <a href="index.html"><button class="button-link">Go back to first page</button></a>
+        </div>
+    </header>
+   
+
+    <script>
+        const calculateButton = document.getElementById ('calculate-button');
+        const display = document.getElementById('display');
+
+
+        calculateButton.addEventListener('click', function(event){
+            event.preventDefault();
+            const heightValue =document.getElementById ('height').value;
+            const weightValue = document.getElementById ('weight').value;
+            console.log('works')
+            console.log (weightValue);
+            console.log(heightValue);
+            const answer = weightValue / (heightValue * heightValue);  
+            console.log(answer);
+            display.innerHTML= answer;
+        })
+    
+    </script>
+
+</body>
+</html>
